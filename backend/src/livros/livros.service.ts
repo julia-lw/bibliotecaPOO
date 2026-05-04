@@ -1,10 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { CreateLivroDto } from './dto/create-livro.dto';
 import { UpdateLivroDto } from './dto/update-livro.dto';
+import { Livro } from './entities/livro.entity';
 
 @Injectable()
 export class LivrosService {
-  create(createLivroDto: CreateLivroDto) {
+  //encapsulamento
+  // Pilar POO: Encapsulamento, Herança e Polimorfismo (EHP)
+  private livros:Livro[]=[];
+
+
+  create(titulo:string,autor:string,qtd_pagina:number) {
     return 'This action adds a new livro';
   }
 
