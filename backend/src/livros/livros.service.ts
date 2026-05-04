@@ -17,12 +17,12 @@ export class LivrosService {
     novoLivro.titulo=titulo;
     novoLivro.autor=autor;
     novoLivro.qtd_pagina=qtd_pagina;
-    this.livros.push
-    return 'This action adds a new livro';
+    this.livros.push(novoLivro)
+    return novoLivro;
   }
 
   findAll() {
-    return `This action returns all livros`;
+    return this.livros;
   }
 
   findOne(id: number) {
