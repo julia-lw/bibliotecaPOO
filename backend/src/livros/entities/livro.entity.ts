@@ -4,7 +4,7 @@ export class Livro {
     titulo:string; //texto
     autor:string;
     ano:number;
-    qtd_pagina:number;
+    qtd_paginas:number;
     disponivel:boolean; //true ou false
     //Métodos (ações)
     //Construtor

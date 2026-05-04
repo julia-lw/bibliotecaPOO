@@ -10,13 +10,13 @@ export class LivrosService {
   private livros:Livro[]=[];
 
 
-  create(titulo:string,autor:string,qtd_pagina:number) {
+  create(titulo:string,autor:string,qtd_paginas:number) {
     //Instanciar novo objeto livro
     const novoLivro = new Livro();
     novoLivro.id=this.livros.length++;
     novoLivro.titulo=titulo;
     novoLivro.autor=autor;
-    novoLivro.qtd_pagina=qtd_pagina;
+    novoLivro.qtd_paginas=qtd_paginas;
     this.livros.push(novoLivro)
     return novoLivro;
   }
