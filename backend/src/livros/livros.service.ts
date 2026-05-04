@@ -11,6 +11,13 @@ export class LivrosService {
 
 
   create(titulo:string,autor:string,qtd_pagina:number) {
+    //Instanciar novo objeto livro
+    const novoLivro = new Livro();
+    novoLivro.id=this.livros.length++;
+    novoLivro.titulo=titulo;
+    novoLivro.autor=autor;
+    novoLivro.qtd_pagina=qtd_pagina;
+    this.livros.push
     return 'This action adds a new livro';
   }
 
