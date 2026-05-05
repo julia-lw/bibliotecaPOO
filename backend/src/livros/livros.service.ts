@@ -28,7 +28,11 @@ export class LivrosService {
     return `This action returns a #${id} livro`;
   }
 
-  update(id: number, updateLivroDto: UpdateLivroDto) {
+  update(id: number, dados:Partial<Livro>) {
+    const index = this.livros.findIndex(livro => livro.id===id);
+    if(index >=0){
+      
+    }
     return `This action updates a #${id} livro`;
   }
 
