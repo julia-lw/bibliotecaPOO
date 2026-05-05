@@ -8,8 +8,8 @@ export class LivrosController {
   constructor(private readonly livrosService: LivrosService) {}
 
   @Post()
-  create(@Body() dados:{titulo:string;autor:string;qtd_paginas:number}) {
-    return this.livrosService.create(dados.titulo,dados.autor,dados.qtd_paginas);
+  create(@Body() dados:{titulo:string;autor:string;qtd_pagina:number}) {
+    return this.livrosService.create(dados.titulo,dados.autor,dados.qtd_pagina);
   }
 
   @Get()
