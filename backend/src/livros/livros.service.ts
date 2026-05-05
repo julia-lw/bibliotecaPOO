@@ -9,7 +9,6 @@ export class LivrosService {
   // Pilar POO: Encapsulamento, Herança e Polimorfismo (EHP)
   private livros:Livro[]=[];
 
-
   create(titulo:string,autor:string,qtd_paginas:number) {
     //Instanciar novo objeto livro
     const novoLivro = new Livro();
@@ -34,6 +33,11 @@ export class LivrosService {
   }
 
   remove(id: number) {
-    return `This action removes a #${id} livro`;
+    const index = this.livros.findIndex(livro => livro.id===id);
+    if(index >=0){
+      this.livros.splice(index,1);
+    return `O livro #${id} foi removido com sucesso.`;
+    }
+    return `O livro #${id} não foi encontrado.`;
   }
 }
