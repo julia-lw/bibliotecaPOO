@@ -32,9 +32,9 @@ export class LivrosService {
     const index = this.livros.findIndex(livro => livro.id===id);
     if(index >=0){
       this.livros[index]={...this.livros[index],...dados};
-    return `O livro #${id} foi encontrado.`;
+    return `O livro #${id} foi atualizado com sucesso.`;
   }
-  return `O livro #${id} foi encontrado.`;
+  return `O livro #${id} não foi atualizado.`;
 }
 
   remove(id: number) {
